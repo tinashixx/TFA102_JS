@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h3>陣列</h3>
+    <script>
+    var str = "var a=10; var b=20";
+    eval(str);
+    document.write("a : ", a, "<br>");
+
+    document.write("isNaN(326) : ", isNaN(326), "<br>"); //false
+    document.write("isNaN('326') : ", isNaN("326"), "<br>"); //false
+    document.write("isNaN('abcd') : ", isNaN("abcd"), "<br>"); //true
+    document.write("isNaN('2015/12/12') : ", isNaN("2015/12/12"), "<br>"); //true
+    </script>
+
+    <h3>自訂function</h3>
+    <script>
+        function sayHello() {
+        document.write("Hello~~~", "<br>");
+        }
+        sayHello();
+    </script>
+
+    <script>
+        function sayHelloToSomeone(name) {
+        document.write(`Hello,${name},您好~~~`, "<br>");
+        }
+        sayHelloToSomeone("文文");
+    </script>
+
+    <script>
+        function needyourname(name) {
+        return 'hi~' + name;
+        }
+        document.write(needyourname("文文"), "<br>");
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>型別轉換</h3>
+    <script>
+    var typen = 12;
+    document.write(typen + 2, "<br>"); // 14
+    // number + number = number
+
+    var typen = 12;
+    var types = "2.5";
+    document.write(typen + types, "<br>"); // 122.5
+    // number + string = string
+
+    var typen = 12;
+    var typeb = true; //1
+    document.write(typen + typeb, "<br>"); // 13
+    // number + boolean = number
+
+    var typen = 12;
+    var typebf = false; //0
+    document.write(typen + typebf, "<br>"); // 12
+    // number + boolean = number
+
+    var types = "2.5";
+    var typeb = true;
+    document.write(types + typeb, "<br>");  // 2.5true
+    // string + boolean = string
+    </script>
+
+    <h3>強制型別轉換</h3>
+    <script>
+    var types = "2.8";
+
+    document.write(parseInt(types) + "<br>"); //2
+    document.write(typeof parseInt(types) + "<br>"); //number
+
+    document.write(parseFloat(types) + "<br>"); //2.8
+    document.write(typeof parseFloat(types) + "<br>"); //number
+
+    </script>
+
+    
+    <h3>比較運算式</h3>
+    <script>
+    document.write('5 > 10 ', 5 > 10, "<br>");              //false
+    document.write('5 >= 10 ', 5 >= 10, "<br>");            //false
+    document.write('5 < 10 ', 5 < 10, "<br>");              //true
+    document.write('5 <= 10 ', 5 <= 10, "<br>");            //true
+    document.write('5 == 10 ', 5 == 10, "<br>");            //false
+    document.write('5 == "5" ', 5 == "5", "<br>");          //true
+    document.write('5 === "5" ', 5 === "5", "<br>");        //false
+    document.write('0 == false ', 0 == false, "<br>");      //true
+    document.write('0 === false ', 0 === false, "<br>");    //false
+    document.write('5 != 10 ', 5 != 10, "<br>");            //true
+    document.write('5 != "5" ', 5 != "5", "<br>");          //false
+    document.write('5 !== "5" ', 5 !== "5", "<br>");        //true
+    </script>
+
+    <h3>三元運算式</h3>
+    <script>
+    var avg = 66;
+    document.write(avg >= 60 ? "通過" : "再努力", '<br>'); 
+    //通過
+
+    var avg = 50;
+    document.write(avg >= 60 ? "通過" : avg >= 50 ? "差十分" : "差得有點多"); 
+    //差十分
+    </script>
+
+
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    table,
+        tr,
+        td {
+            border: 1px solid rebeccapurple;
+            border-collapse: collapse;
+            padding: 5px 8px;
+            text-align: center;
+        }
+
+        tr:first-child() {
+            color: white;
+            background-color: rebeccapurple;
+        }
+    </style>
+
+
+
+</head>
+<body>
+    
+    <h3>陣列</h3>
+    <script>
+        document.write("<table>");
+
+        arr2 =
+         
+        for (var i = 0; i < arr2.length; i++) {
+            if( i ==0){
+                document.write("<tr class='aaa'>");
+            }else{
+                document.write("<tr>")
+            }
+            for (var j = 0; j < arr2[i].length; j++) {
+                document.write("<td>", arr2[i][j], "</td>");
+            } 
+            document.write("</tr>");
+        }
+
+        document.write("</table>");
+    </script>
+    
+</body>
+</html>

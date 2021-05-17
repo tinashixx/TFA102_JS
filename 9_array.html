@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h3>陣列</h3>
+    <script>
+        var arr5 = new Array(6);
+        document.write(arr5, "<br>");
+        // 如果你的值只有一個，而且型別還是數值，這時候要小心了!
+        // 這樣寫會被以為是跟陣列說你要請她幫你預留六個值
+
+        var arr = [11, 66, 33, 55, 44, 22];
+        document.write("arr有幾個值 : ", arr.length, "<br>");
+        for (var i = 0; i < arr.length; i++) {
+            document.write(arr[i], "<br>");
+        }
+
+        //arr langth
+        var arr = new Array(11, 22, 33);
+        arr[7] = 100;
+        document.write("arr有幾個值 : ", arr.length, "<br>");
+        for (var data of arr) {
+            document.write(`${data}<br> `);
+        }
+
+        //i in arr
+        var arr = new Array(11, 22, 33);
+        arr[7] = 100;
+        for (var i in arr) {
+            document.write(`${i} : ${arr[i]}<br> `);
+        }
+
+        //for(data of arr)
+        var arr = new Array(11, 22, 33);
+        arr[7] = 100;
+        document.write("arr有幾個值 : ", arr.length, "<br>");
+        for (var data of arr) {
+            document.write(`${data}<br> `);
+        }
+
+        var arr = new Array(11, 22, 33);
+        // 索引值 0,1,2
+        // 陣列長 arr.length = 3
+        arr[arr.length] = 100; //arr[3] = 100的意思
+        // 這時的陣列長 arr.length = 4 囉!
+        arr[arr.length] = 1000;//arr[4] = 1000的意思
+        document.write(arr, "<br>");
+        arr.push(555);// 直接放到陣列的最後一個
+        document.write(arr, "<br>");
+
+        // 將data放到陣列中的索引值為index的位置
+        var arr = new Array(11, 22, 33, 44, 55, 66, 77);
+        var index = 5;
+        var data = "我在這";
+        // 所以我要將"我在這"塞到陣列索引值5的位置
+        // 我要將arr陣列索引值為5的之後的往後移
+        // 也就是原本最後的值arr[6]往後移成arr[7]
+        // 再將arr[5]往後移成arr[6]
+        // 到此 arr[5]跟arr[6]值一樣的喔
+        // 11, 22, 33, 44, 55, 66, 66, 77
+        // 所以再將arr[5]=data就可以將"我在這"放在索引值5了!
+        // 程式開始處理囉~
+        for (var i = arr.length; i > index; i--) {
+            arr[i] = arr[i-1];
+        }
+        arr[index] = data;
+        document.write(arr, "<br>");
+
+        //若找到, 請顯示其索引值，若找不到請顯示找不到的訊息
+
+        var arr = new Array(11, 22, 33, 44, 55, 66, 77);
+        var data = 33;
+        var length = arr.length;
+        for (var i = 0; i < length; i++) {
+            if (arr[i] == data) {
+                document.write(`${data}在陣列中的索引值為${i}<br>`);
+                break;
+            }
+        }
+        if (i == length) {
+            document.write("找不到", "<br>");
+        }
+
+        //若找到, 請顯示其索引值，若找不到請顯示找不到的訊息
+        var arr = new Array(11, 22, 33, 44, 55, 66, 77);
+        var data = 0;
+        var length = arr.length;
+        var found = false;
+        for (var i = 0; i < length; i++) {
+            if (arr[i] == data) {
+                found = true;
+                document.write(`${data}在陣列中的索引值為${i}<br>`);
+                break;
+            }
+        }
+        if (found == false) {
+            document.write("找不到", "<br>");
+        }
+
+        // 找到資料(33)在陣列中第一次出現的位置: indexOf()
+        var arr = new Array(11, 22, 33, 44, 55, 66, 77, 22, 33);
+        var data = 33;
+        var index = arr.indexOf(data); // 找到第一個33
+        document.write(`${data}在陣列中的索引值為${index}<br>`);
+
+        index = arr.indexOf(data, 5);// 索引值5之後有沒有33
+        document.write(`${data}在陣列中的索引值為${index}<br>`);
+
+        data = 333;
+        index = arr.indexOf(data); // 找不到會傳回 -1;
+        document.write(`${data}在陣列中的索引值為${index}<br>`);
+
+
+    </script>
+
+</body>
+</html>

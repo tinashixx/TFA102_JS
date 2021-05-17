@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+    </style>
+
+</head>
+<body>
+
+    <h3>for迴圈</h3>
+    <script>
+    for (var i = 1; i <= 3; i++) {
+        document.write("I love JavaScript", "<br>");
+      }
+    </script>
+
+    <h3>巢狀迴圈</h3>
+    <script>
+    document.write("<table>");
+    for (var i = 1; i <= 3; i++) {
+    document.write("<tr>");
+    for (var k = 1; k <= 3; k++) {
+        document.write("<td>", "ヾ(・ω・ｏ)", "</td>");
+    }
+    document.write("</tr>");
+    }
+    document.write("</table>");
+    </script>
+
+    <h3>九九乘法表練習</h3>
+    <script>
+    document.write("<table>");
+    for (var i = 1; i <= 9; i++) {
+    document.write("<tr>");
+    for (var j = 1; j <= 9; j++) {
+            document.write("<td>", i, "*", j, "=", i*j,"</td>");
+    }
+    document.write("</tr>");
+    }
+    document.write("</table>");
+    </script>
+
+    <h3>練習</h3>
+    <script>
+        var time = 8000;
+        var hour;
+        var min;
+        var sec;
+        if( (time/360) != 0){
+            hour = parseInt(time/3600);
+            time = time%60;
+            if((time/60) != 0){
+                min = parseInt(time/60);
+                sec = time%60;
+            }
+        }
+
+
+        document.write( time + "秒=" + hour + "小時" + min + "分" + sec +"秒");
+    </script>
+
+</body>
+</html>

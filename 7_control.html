@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <h3>三元運算式</h3>
+    <script>
+        //==== A:
+
+        var year = 2020;
+        if (year > 1919) {
+        document.write(">1919<br>");
+        } else if (year > 2009) {
+        document.write(">2009<br>");
+        } else if (year >= 2020) {
+        document.write(">=2020<br>");
+        } else {
+        document.write("when?<br>");
+        }
+
+        // >1919
+
+
+        //==== B:
+
+        var year2 = 2020;
+        if (year2 >= 2020) {
+        document.write(">=2020<br>");
+        } else if (year2 > 2009) {
+        document.write(">2009<br>");
+        } else if (year2 > 1919) {
+        document.write(">1919<br>");
+        } else {
+        document.write("when?<br>");
+        }
+
+        // >=2020
+
+        //==== 練習:
+
+        var degree;
+        var type;
+        var money;
+
+        type = 1;
+        degree = "master";
+
+        if (type == 1) {
+            money = 5000
+            if(degree == "master"){
+                money = 6000
+            }
+        }else if(type == 2 ){
+            money = 3000   
+        }else if (type == 3) {
+            money = 1000 
+        }else {
+        document.write("請輸入正確補助類型");
+        }
+
+        document.write( "補助款:" + money);
+
+    </script>
+
+    <h3>Switchcase</h3>
+    <script>
+        var game = 1;
+        switch (game) {
+        case 1:
+            document.write(game, "集合啦 ! 動物森友會");
+            break;
+        case 2:
+            document.write(game, "薩爾達傳說");
+            break;
+        default:
+            document.write(game, "沒有遊戲可以玩");
+        }
+        // 1集合啦 ! 動物森友會
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>

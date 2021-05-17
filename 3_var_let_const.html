@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>宣告變數</h3>
+
+    <script>
+
+        //方法一
+        var product;
+        product = 200;
+        document.write("$" + product + "<br>");
+
+        //方法二
+        var product = 200;
+        document.write("$" + product + "<br>");
+
+        var pp1 = 20;//ok
+        var apple = "小寫蘋果";
+        var APPLE = "大寫蘋果";
+        document.write("pp1:", pp1, "<br>"); //20
+        document.write("apple:", apple, "<br>"); //小寫蘋果
+        document.write("APPLE:", APPLE, "<br>"); //大寫蘋果
+
+        var avg = 66;
+        if(avg >= 60){
+            let words = "好棒~"; //區塊作用域, 只能在此區塊中使用
+            document.write(words, "<br>");
+        }else{
+        let words = "加油~";
+            document.write(words, "<br>");  
+        }
+        document.write(words, "<br>");
+        //Uncaught ReferenceError: words is not defined
+    </script>
+
+</body>
+</html>
